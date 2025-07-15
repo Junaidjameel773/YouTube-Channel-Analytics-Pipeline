@@ -1,39 +1,3 @@
-# from googleapiclient.discovery import build
-# import pandas as pd
-# import sqlite3
-
-# API_KEY = 'AIzaSyCWgn8JxgyKLVHclFOae_5YLOam8fUM4is'
-# youtube = build('youtube', 'v3', developerKey=API_KEY)
-
-# channel_ids = ['UC_x5XG1OV2P6uZZ5FSM9Ttw']  # Example: Google Developers
-
-# def get_channel_stats(youtube, channel_ids):
-#     all_data = []
-#     request = youtube.channels().list(
-#         part='snippet,contentDetails,statistics',
-#         id=','.join(channel_ids)
-#     )
-#     response = request.execute()
-
-#     for item in response['items']:
-#         data = {
-#             'channelName': item['snippet']['title'],
-#             'subscribers': item['statistics']['subscriberCount'],
-#             'views': item['statistics']['viewCount'],
-#             'totalVideos': item['statistics']['videoCount'],
-#             'playlistId': item['contentDetails']['relatedPlaylists']['uploads']
-#         }
-#         all_data.append(data)
-
-#     return pd.DataFrame(all_data)
-
-# df = get_channel_stats(youtube, channel_ids)
-# print(df)
-
-
-
-# fetch_youtube.py
-
 from googleapiclient.discovery import build
 import pandas as pd
 import sqlite3
